@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
+*:focus, *:active {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #8c8eae;
+    min-height: 100vh;
+}
+.card-menu-wrapper {
+    padding-bottom: 50px;
+}
+.card-menu-content {
+    padding: 40px;
+    color: #eee;
+    border-radius: 0 0 0 60px;
+}
+.card-menu-content img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.card-menu-content .img-stack img:not(:first-child) {
+    margin-left: -20px;
+}
+.card-menu {
+    cursor: pointer;
+    max-height: 250px;
+    transition: all 500ms ease-in-out;
+}
+.card-menu.active {
+    max-height: 500px;
+}
+.card-menu.nav {
+    background-color: #db789a;
+}
+.card-menu.nav .nav-item{
+    font-weight: 300;
+    color: #666;
+}
+.card-menu.nav .nav-item.active{
+    font-weight: 700;
+    color: #333;
+}
+.card-menu.nav .card-menu-content {
+    background-color: #eee;
+    display: flex;
+    justify-content: space-around;
+}
+.card-menu.health {
+    background-color: #864baf;
+}
+.card-menu.health .card-menu-content {
+    background-color: #db789a;
+}
+.card-menu.language {
+    background-color: #160728;
+}
+.card-menu.language .card-menu-content {
+    background-color: #864baf;
+}
+.card-menu.design {
+    background-color: #8c8eae;
+}
+.card-menu.design .card-menu-content {
+    background-color: #160728;
+}
+.card-menu .helper {
+    font-weight: 200;
+    font-size: 11px;
+}
+.card-menu .main {
+    font-weight: 700;
+    font-size: 25px;
+    margin: 5px 0 15px;
+}
+.card-menu .sub-main {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 15px 0 5px;
+}
+.card-menu .action-item {
+    background-color: #eee;
+    padding: 10px 15px;
+    border-radius: 50px;
+    margin-top: 20px;
+    color: #333;
+    font-size: 15px;
+    display: flex;
+}
+
+.card-menu .action-item .action-item-qn {
+    flex: none;
+    align-self: center;
+}
+
+.card-menu .action-item .action-item-optns {
+    margin-left: auto;
+}
+
+.card-menu .action-item button{
+    background-color: #ccc;
+    color: #333;
+    border: 1px solid #888;
+    border-radius: 50px;
+    padding: 7px 14px;
+    outline: none;
+}
+
+.card-menu-content .content {
+    transition: all 400ms ease-in-out;
+}
+
+.fadefromleft {
+    animation: fadefromleft 500ms ease-in-out 1 forwards;
+}
+
+@keyframes fadefromleft{
+    from {
+        transform: translateX(20px);
+        opacity: 0;
+    } to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.showIfActive {
+    display: none !important;
+}
+
+.active .showIfActive {
+    display: initial !important;
+}
+
+.active .dontShowIfActive {
+    display: none !important;
+}
